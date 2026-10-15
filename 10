@@ -1,0 +1,48 @@
+# WEEK 10: CHAIN-OF-THOUGHT & TASK DECOMPOSITION
+ 
+print("===== WEEK 10: TASK DECOMPOSITION =====")
+ 
+task = "Plan a 3-day trip within a budget of Rs. 10,000."
+ 
+sub_tasks = [
+    "1. Select the destination.",
+    "2. Find the transportation options.",
+    "3. Calculate transportation cost.",
+    "4. Find budget accommodation.",
+    "5. Calculate hotel cost for 3 days.",
+    "6. Estimate food expenses.",
+    "7. List important sightseeing places.",
+    "8. Calculate sightseeing and local travel expenses.",
+    "9. Calculate the total trip cost.",
+    "10. Check whether the total cost is within Rs. 10,000."
+]
+ 
+print("\n--- COMPLEX TASK ---")
+print(task)
+ 
+print("\n--- TASK DECOMPOSITION ---")
+ 
+for step in sub_tasks:
+    print(step)
+ 
+transport = 2500
+hotel = 3000
+food = 1800
+local_travel = 1200
+sightseeing = 500
+ 
+total_cost = transport + hotel + food + local_travel + sightseeing
+ 
+print("\n--- COST CALCULATION ---")
+print("Transportation : Rs.", transport)
+print("Hotel          : Rs.", hotel)
+print("Food           : Rs.", food)
+print("Local Travel   : Rs.", local_travel)
+print("Sightseeing    : Rs.", sightseeing)
+ 
+print("\nTotal Cost      : Rs.", total_cost)
+ 
+if total_cost <= 10000:
+    print("Result: Trip is within the Rs. 10,000 budget.")
+else:
+    print("Result: Trip exceeds the Rs. 10,000 budget.")
